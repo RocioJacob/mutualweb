@@ -1,0 +1,55 @@
+.contenedor{
+  text-align: center;
+}
+.credencial{
+    position: relative;
+    display: inline-block;
+    background: white;
+}
+
+.centrado1{
+    position: absolute;
+    top: 70%;
+    left: 4%;
+    color: white;
+    font-family: 'Times';
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.centrado2{
+    position: absolute;
+    top: 80%;
+    left: 4%;
+    color: white;
+    font-family: 'Times';
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.centrado3{
+    position: absolute;
+    top: 48%;
+    left: 68%;
+    height: 40%;
+}
+
+.imprimir{
+  text-align: center;
+  font-size: 20px;
+}
+
+#btnimprimir{
+  background-color: #3A73A8;
+  text-align: center;
+  color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  font-family: 'Georgia', cursive;
+  width: 110px !important; /*tamaño botones*/
+  height: 40px !important;
+}
+
+#btnimprimir:hover{
+  -webkit-transform:scale(1.1);transform:scale(1.1); /*Acercamiento*/
+}
