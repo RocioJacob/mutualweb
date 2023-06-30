@@ -38,7 +38,7 @@ include ('estiloMW.php');
     <!-- Si no esta habilitado ver que tramites puede hacer -->
 <?php 
 if (!estahabilitadoafiliado($documento)){ ?> 
-    <div class="d-none d-sm-none d-md-block">
+    <div class="">
       <div id="advertencia">NO PUEDE GESTIONAR NINGÚN TIPO DE TRÁMITE YA QUE NO ESTA HABILITADO EN MUTUAL</div> 
       <br>
       <div class="container" id="containerMenu">
@@ -73,7 +73,7 @@ if (!estahabilitadoafiliado($documento)){ ?>
 else{ ?>
 
 <!-- Para computadora -->
-  <div class="d-none d-sm-none d-md-block">
+  <div class="">
       <div id="subtitulo">SELECCIONE EL TRÁMITE QUE DESEA GESTIONAR Y COMPLETE EL FORMULARIO
       </div> 
       <br>
@@ -96,7 +96,7 @@ else{ ?>
         <button class="boton" id="botonAcceder5" type="submit">SUBSIDIO POR FALLECIMIENTO</button>
      
         <button class="boton" id="botonAcceder6" type="submit">SUBSIDIO POR NACIMIENTO</button>
-        <button class="boton" id="botonAcceder3" type="submit">SUBSIDIO SOLIDARIO MUTUAL</button>
+        <button class="boton" id="botonAcceder3" type="submit">SUBSIDIO SOLIDARIO</button>  <!--se eliminara pronto-->
         <button class="boton" id="botonAcceder8" type="submit">TURISMO</button>
         
       </div>

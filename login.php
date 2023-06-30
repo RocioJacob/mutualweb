@@ -29,19 +29,19 @@ if($cantidad>0){//Existe
 		$insert = mysqli_query($conexion,"INSERT INTO log(documento, tipo, idAlerta, email) VALUES('$documento', 'INGRESO', '21', '$email')"); //Devuelve False en caso de error
 
 		//echo json_encode(array('mensaje' => 'LA CONTRASEÑA ES VALIDA', 'salida' => '0'));
-		echo json_encode(array('mensaje' => '<p><img src="imagenes/logoMutual.jpg"><br><span style="color:#0072BC; font-size: 32px; font-family: Georgia, cursive;">Bienvenido al sistema web<br>de la Mutual Policial</span><br><span style="color:black; font-size: 22px; font-family: Georgia, cursive;">Ya puede comenzar a utilizarlo</span><br><span style="color:black; font-size: 16px; font-family: Georgia, cursive;">Consultas a soporte@mppneuquen.com.ar</span></p>', 'salida' => '0'));//ing21 PROBADO
+		echo json_encode(array('mensaje' => '<p><img src="imagenes/logoMutual.jpg"><br><span style="color:#0072BC; font-size: 32px;">Bienvenido al sistema web<br>de la Mutual Policial</span><br><span style="color:black; font-size: 22px;">Ya puede comenzar a utilizarlo</span><br><span style="color:black; font-size: 16px;">Consultas a soporte@mppneuquen.com.ar</span></p>', 'salida' => '0'));//ing21 PROBADO
 	}
 	else{//Existe el afiliado titular con documento ingresado pero no con la contraseña ingresada
 		$insert = mysqli_query($conexion,"INSERT INTO log(documento, tipo, idAlerta, email) VALUES('$documento', 'INGRESO', '22', '$email')");//Devuelve False en caso de error
 
 		//echo json_encode(array('mensaje' => 'Datos incorrectos', 'salida' => '0'));
-		echo json_encode(array('mensaje' => '<p><span style="color:#0072BC; font-size: 32px; font-family: Georgia, cursive;">DATOS INCORRECTOS</span><br><span style="color:black; font-size: 22px; font-family: Georgia, cursive;">Verifique los datos ingresados</span><br><span style="color:black; font-size: 18px; font-family: Georgia, cursive;">Consultas a soporte@mppneuquen.com.ar</span></p>', 'salida' => '1'));//ing22 PROBADO
+		echo json_encode(array('mensaje' => '<p><span style="color:#0072BC; font-size: 32px; >DATOS INCORRECTOS</span><br><span style="color:black; font-size: 22px; ">Verifique los datos ingresados</span><br><span style="color:black; font-size: 18px; ">Consultas a soporte@mppneuquen.com.ar</span></p>', 'salida' => '1'));//ing22 PROBADO
 	}
 }
 else{//No existe el afiliado titular con documento ingresado
 	$insert = mysqli_query($conexion,"INSERT INTO log(documento, tipo, idAlerta) VALUES('$documentoIngresado', 'INGRESO', '22')"); //Devuelve False en caso de error
 
 	//echo json_encode(array('mensaje' => 'Datos incorrectos', 'salida' => '1'));
-	echo json_encode(array('mensaje' => '<p><span style="color:#0072BC; font-size: 32px; font-family: Georgia, cursive;">DATOS INCORRECTOS</span><br><span style="color:black; font-size: 22px; font-family: Georgia, cursive;">Verifique los datos ingresados</span><br><span style="color:black; font-size: 18px; font-family: Georgia, cursive;">Consultas a soporte@mppneuquen.com.ar</span></p>', 'salida' => '1')); //ing22 PROBADO
+	echo json_encode(array('mensaje' => '<p><span style="color:#0072BC; font-size: 32px;">DATOS INCORRECTOS</span><br><span style="color:black; font-size: 22px; ">Verifique los datos ingresados</span><br><span style="color:black; font-size: 18px;">Consultas a soporte@mppneuquen.com.ar</span></p>', 'salida' => '1')); //ing22 PROBADO
 }
 ?>

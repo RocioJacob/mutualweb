@@ -35,7 +35,7 @@ include("estiloMW.php");
 <!-- Para computadora -->
     <!--div class="d-none d-sm-none d-md-block"-->
       <div class="container" id="containerMenu">
-      <div class="container text-center h-100 d-flex justify-content-center align-items-center">
+      <div class="table-responsive">
 
       <?php
         $query="SELECT * FROM tramites_uno WHERE documento='$documento' ORDER BY id ASC";

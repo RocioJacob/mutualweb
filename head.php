@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <!--<title>Sistema web</title>-->
-  <link rel="icon" type="image/png" href="imagenes/logo.ico"/>
+  <link rel="icon" type="image/png" href="imagenes/logo.png"/>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>

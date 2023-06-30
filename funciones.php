@@ -536,7 +536,7 @@ function mostrarcredencialtitular($documento){
 
 function imprimir(){
   //$imprimir = '<div class="imprimir" style="text-align:center;"><input type="button" name="imprimir" value="Imprimir" onclick="window.print();" id="btnimprimir" style="color: #3A73A8; border-radius:10%; text-align: center;"></div>';
-  $imprimir2 = '<div style="text-align:center;"><button class="btn btn-responsive btninter" type="button" style="height:50px; width:120px;border: 2px solid; border-radius: 20px; font-size: 17px; font-family: Georgia, cursive; background-color:#3A73A8; color:white;" onclick="window.print();">Imprimir</button></div>';
+  $imprimir2 = '<div style="text-align:center;"><button class="btn btn-responsive btninter" type="button" style="height:50px; width:120px;border: 2px solid; border-radius: 20px; font-size: 17px; background-color:#3A73A8; color:white;" onclick="window.print();">Imprimir</button></div>';
   echo $imprimir2;
   echo '<br/>';
 }

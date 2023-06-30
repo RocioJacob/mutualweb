@@ -1,10 +1,16 @@
 <style type="text/css">
+                           /*GENERAL--------------------------------------------*/
+  /*para pc*/
+@media screen and (min-width: 1024px){    }
+
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
+
 body{
   background-image: url("imagenes/fondo2.jpg");
-  font-family: 'Georgia';
-
-
-    /*background-color: #8faed6;*/
 }
 
 hr{
@@ -21,14 +27,11 @@ hr{
 
 }
 
-
 .container{
    text-align: center;
-    /*background-color: #fff;*/
 }
 
 #saludo{
-  font-family: 'Georgia' cursive; 
   font-size: 15px; 
   color: #3A73A8; 
   text-align: left;
@@ -42,13 +45,11 @@ hr{
   font-weight: 15px;
 }
 
-
 #subtitulo{
   color: #0A1931;
   text-align: center; /*alineacion*/
   font-size: 15px;  /*tamaño letra*/
   font-weight: 300; /*grosor letra*/
-  /*font-family: 'Georgia', cursive;*/
 }
 
 #textoizq{
@@ -80,12 +81,12 @@ hr{
 }
 
 .boton{/*el boton es responsive y con un tamaño independiente al texto para que todos tengan un tamaño fijo*/
-  font-size: 110%;
+  font-size: 100%;
   color: #EFEFEF;
   border-color: #BBE1FA;
   background-color: #0F4C75;
-  height: 10vh;
-  width: 30%;
+  height: auto;
+  width: 40vw;
   margin-bottom: 3%;
   margin-right: 2%;
   border-radius: 2vh;   /*uso vh para que el radio se base en la altura y se modifique cuando cambia el tamaño de los botones*/
@@ -96,40 +97,78 @@ hr{
   background-color: #EFEFEF;
   transform: scale(1.1);
 }
+         /*NAVEGACION.PHP-------------------------------------------------*/
+/*para pc*/
+@media screen and (min-width: 1024px){  
 
+#botonMenu{
+  margin-right: 15%;
+  border: 2px solid;
+  border-radius: 2vh;
+  font-size: 2vh;
+}
+#leyenda{
+    font-size: 2.5vw;
+}
 #logonav{
   height: 20vh;
 }
+
+}
+
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ 
+
+#botonMenu{
+  margin-right: 2px;
+  margin-bottom: 3px;
+  border: 1px solid;
+  border-radius: 2vh;
+  font-size: 1.5vh;
+}
+#leyenda{
+  font-size: 2vw;
+}
+#logonav{
+  height: 10vh;
+}
+}
+
+/*para celulares*/
+@media screen and (max-width: 600px){  
+
+#botonMenu{
+  margin-right: 2px;
+  margin-bottom: 3px;
+  border: 1px solid;
+  border-radius: 2vh;
+  font-size: 1vh;
+}
+#leyenda{
+  font-size: 3vw;
+}
+#logonav{
+  height: 6vh;
+}
+
+} /*fin media queri*/
+
+
 #leyenda{
   color: white;
   margin: 0%;       /* centra el texto en la barra de navegacion*/
-  font-size: 2.5vw;
+
 }
 
-#barra{
-  background-image: url("imagenes/fondoBarra.png");
-  
-  /*background: #003366;*/
-  color: EFEFEF;
-  height: 20%;
-}
 
-#salir{
-  text-decoration:none;
-  color: white;
-  font-size: 18px;
-  font-family: Georgia;
-}
 #botonMenu{
   float:right;
-  margin-right: 15%;
   background-color: #3282B8;
   color: white;
-  border: 2px solid;
-  border-radius: 2vh;
-  text-align: left;
+  text-align: center;
   border-color: #EFEFEF;
-  font-size: 1vw;
+  font-weight: bold;
+  width: auto;
 }
 
 #botonMenu:hover{
@@ -138,8 +177,29 @@ hr{
   border-color: #3282B8;
   -webkit-transform:scale(1.1);transform:scale(1.1); /*Acercamiento*/
 }
+#barra{
+  background-image: url("imagenes/fondoBarra.png");
+  color: EFEFEF;
+  height: 20%;
+}
 
-      /*ESTILO CAMBIAR CLAVE*/
+#salir{
+  text-decoration:none;
+  color: white;
+  font-size: 18px;
+}
+
+
+      /*ESTILO CAMBIAR CLAVE-------------------------------------------------------*/
+
+/*para pc*/
+@media screen and (min-width: 1024px){    }
+
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 
 #clave{
   border-color: #2874A6; 
@@ -165,9 +225,7 @@ hr{
     background: url('imagenes/loader.gif') 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
-//**{
-  font-family: 'Georgia', cursive;
-}*//
+
 .input-group-text{
   border: solid 1px #2874A6;
   background-color: white;
@@ -177,7 +235,7 @@ hr{
 }
 a{
   color: #2874A6;
-  /*font-family: 'Georgia', cursive;*/
+ 
 }
 a:hover{
   cursor: pointer;
@@ -189,15 +247,12 @@ a:hover{
   height: 550px;
   margin: 50px auto;
   background-color: white;
-  /*border: 1px solid #1E90FF;*/
-  /*border-radius:8px;*/
-  /*padding: 0px 9px 0px 9px;*/
 }
 #container{
   display: flex;
 }
 #containerMenu{
-  flex-basis: 33%;
+  /*flex-basis: 33%;*/
 }
 #botonCambiar{
   background-color: #3282B8;
@@ -206,16 +261,13 @@ a:hover{
   border: 2px solid;
   border-radius: 25px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;*/
 }
 #botonCambiar{
-  /*background: #003366;*/
   color: white;
   background-color: #185ADB!important ;
 }
 #botonCambiar:hover{
   background: #BBE1FA !important;
-  /*color: #003366 !important;*/
   color: #148F77 !important;
 }
 
@@ -227,8 +279,6 @@ a:hover{
   border: 2px solid;
   border-radius: 25px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;
-  /*background: #003366;*/
   color: white;
   background-color: #062863;
   text-align: center ;
@@ -243,7 +293,6 @@ a:hover{
   text-align: center;
   padding-top: 30px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;*/
 }
 
 
@@ -252,7 +301,6 @@ a:hover{
   text-align: center; /*alineacion*/
   font-size: 25px;  /*tamaño letra*/
   font-weight: 500; /*grosor letra*/
-  /*font-family: 'Georgia', cursive;*/
   margin:5px;
 }
 
@@ -262,7 +310,14 @@ a:hover{
 
       /* ESTILO HISTORIALES */
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
 
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 <style type="text/css">
 h6{
   font-family: 'italic'; 
@@ -284,9 +339,6 @@ h6{
 }
 #detalle{
   font-family: 'Verdana';
-  /*font-family: 'Georgia';*/
-  /*font-family: 'italic';*/
-  /*color:#003366;*/
   color:black;
   font-size: 13px;
 }
@@ -316,6 +368,14 @@ h6{
 
       /*ESTILO ACTIVAR*/
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
+
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 
 .form-control{
   text-transform:uppercase; 
@@ -353,8 +413,8 @@ h6{
 
 a{
   color: #2874A6;
-  /*font-family: 'Georgia', cursive;*/
 }
+
 a:hover{
   cursor: pointer;
   color: black;
@@ -365,9 +425,6 @@ a:hover{
   height: 550px;
   margin: 50px auto;
   background-color: white;
-  /*border: 1px solid #1E90FF;*/
-  /*border-radius:8px;*/
-  /*padding: 0px 9px 0px 9px;*/
 }
 
 #botonActivar , #botonRecuperar , #botonReestablecer, #botonRegistrar, #botonVerificar{
@@ -376,14 +433,12 @@ a:hover{
   border: 2px solid;
   border-radius: 25px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;*/
   color: white;
   background-color: #1c4c96;
 }
 
 #botonActivar:hover, #botonRecuperar:hover, #botonReestablecer:hover, #botonRegistrar:hover, #botonVerificar:hover{
   background: white;
-  /*color: #003366 !important;*/
   color:#1c4c96 !important;
 }
  #imagen{
@@ -392,19 +447,23 @@ a:hover{
     margin-top:3%;
   }
 #usuario::placeholder, #documento::placeholder, #email::placeholder, #clave::placeholder, #confirmacion::placeholder{
-  /*color: #3391FF;*/
-  /*color: #2874A6;*/
   text-align: center;
   padding-top: 30px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;*/
   margin: 2%;
   border-color: #BBE1FA;
 }
 
     /* ACTUALIZACIONES */
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
 
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 #alerta{
     color: #0072BC;
     text-align:center;
@@ -421,7 +480,14 @@ a:hover{
 
       /* BUSQUEDA */
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
 
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 #alerta2{
     color: black;
 }
@@ -429,7 +495,14 @@ a:hover{
 
     /*ESTILO CREDENCIAL*/
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
 
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 .btninter{
   border: 2px solid;
   border-color: #0072BC;
@@ -438,18 +511,15 @@ a:hover{
   padding: 5px 1px; /*arriba-abajo, izq-der*/
   margin: 0px 10px 10px 0px;
   float: center;
-  border-radius: 15px; /*redondeo de las esquinas*/
-  /*font-family: 'Georgia', cursive;*/
-  /*font-family: 'Georgia', cursive;*/
-  font-size: 17px; /*tamaño letra*/
-  color: white; /*color letra*/
-  /*text-decoration: none;  */
-  width: 180px !important; /*tamaño botones*/
+  border-radius: 15px;      /*redondeo de las esquinas*/
+  font-size: 17px;          /*tamaño letra*/
+  color: white;             /*color letra*/
+  width: 180px !important;  /*tamaño botones*/
   height: 40px !important;
-  text-align: center; /*alineacion de texto*/
+  text-align: center;       /*alineacion de texto*/
   background: #0072BC;
-
 }
+
 .btninter:hover {
   background: white;
   color: #0072BC !important;
@@ -458,10 +528,17 @@ a:hover{
 
       /*ESTILO CUENTA CORRIENTE */
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
+
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 
 #botonDeuda{
   float:right;
-  /*margin-right: 5vh;*/
   background-color: #1B262C;
   color: white;
   border: 2px solid;
@@ -474,15 +551,11 @@ a:hover{
 
 #detalle1{
   font-family: 'Verdana';
-  /*font-family: 'Georgia';*/ 
-  /*font-family: 'italic';*/
   color:red;
   font-size: 13px;
 }
 #detalle2{
   font-family: 'Verdana';
-  /*font-family: 'Georgia';*/ 
-  /*font-family: 'italic';*/
   color:#003366;
   font-weight: bold;
   font-size: 13px;
@@ -502,8 +575,6 @@ th {
   border: 2px solid;
   border-radius: 25px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;*/
-  /*background: #003366;*/
   color: white;
   background-color: #062863;
   text-align: center ;
@@ -516,7 +587,14 @@ th {
 
     /* FORMULARIOS */
 
+/*para pc*/
+@media screen and (min-width: 1024px){    }
 
+/*para tablets*/
+@media screen and (min-width: 601px) and (max-width: 1023px){ }
+
+/*para celulares*/
+@media screen and (max-width: 600px){   }
 #pieDePaginaTramites{
   color: #EFEFEF;
   text-align: center;
@@ -525,10 +603,8 @@ th {
 
 #nomTramite{
   font-size: 300%;
-  font-family: 'Georgia';
 }
 .caja { 
-font-family: Georgia;
 font-size: 100%;
 color: #1B262C; 
 /*border-radius: 5vh;*/
@@ -539,19 +615,8 @@ border-left: 1vh solid #0072BC;
 padding: 5px;
 }
 
-/*#botonMenu{    esta incluido en la barra de navegacion
-  float:right;
-  margin-right: 5px;
-  background-color: #148F77;
-  color: white;
-  border: 2px solid;
-  border-radius: 10px;
-}*/
 #botonEnviar{
   float:left;
-}
-#botonEnviar{
-  
   margin-right: 10px;
   background-color: #3282B8;
   color: white;
@@ -568,7 +633,6 @@ padding: 5px;
   -webkit-transform:scale(1.1);transform:scale(1.1); /*Acercamiento*/
 }
 
-
 #loader {
     position: fixed;
     left: 0px;
@@ -579,6 +643,7 @@ padding: 5px;
     background: url('imagenes/loader.gif') 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
+
 h6{
   font-family: 'italic'; 
   color: #3A73A8;
@@ -589,13 +654,11 @@ h6{
 
 
 #documento::placeholder {
-  /*color: #3391FF;*/
-  /*color: #2874A6;*/
   text-align: center;
   padding-top: 30px;
   font-size: 15px;
-  /*font-family: 'Georgia', cursive;*/
 }
+
 #img-menu{
   height: 20%;
   width: 20%;
@@ -605,6 +668,5 @@ h6{
 #img-menu:hover{
   transform: scale(1.1);
 }
-
 
 </style>

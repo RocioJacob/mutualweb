@@ -51,7 +51,7 @@ include ('estiloMW.php');
       ?>
 
     <h4 id="titulo">TITULAR</h4>
-    <div class="container" id="textoizq">
+    <div class="container table-responsive" id="textoizq">
       <div class="row">
         <div class="col"><h6>CODIGO: <a ><?php echo $arrayTitular['codigo'].'<br>';?></a></h6></div>
         <div class="col"><h6>APELLIDO: <a ><?php echo $arrayTitular['apellido'].'<br>';?></a></h6></div>
@@ -118,7 +118,7 @@ include ('estiloMW.php');
 
 
     <h4 id="titulo">CARGAS</h4><br>
-    <table class="table table-bordered" id="textoizq">
+    <table class="table table-bordered table-responsive" id="textoizq">
       <tr>
         <td id="fila">Código</td>
         <td id="fila">Carga</td>
@@ -241,7 +241,7 @@ include ('estiloMW.php');
       <?php echo '<br>';echo '<br>';?>
 
         <h4 id="titulo">CARGAS</h4>
-        <table class="table table-bordered" id="tablaCarga">
+        <table class="table table-bordered table-responsive" id="tablaCarga">
           <!--tr>
             <td id="fila">Codigo</td>
             <td id="fila">Carga</td>
